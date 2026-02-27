@@ -1,0 +1,93 @@
+############################
+# Logs
+############################
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+############################
+# Sistema Operacional
+############################
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+############################
+# Dependências / builds
+############################
+node_modules/
+jspm_packages/
+bower_components/
+
+dist/
+build/
+out/
+.next/
+.nuxt/
+.parcel-cache/
+.cache/
+.tmp/
+tmp/
+
+############################
+# Python
+############################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+.pytest_cache/
+.mypy_cache/
+.pytest_cache/
+.coverage*
+htmlcov/
+
+############################
+# IDEs / Editor
+############################
+.vscode/
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+############################
+# Arquivos de ambiente / segredos
+############################
+.env
+.env.*
+!.env.example
+*.local
+
+############################
+# Outros
+############################
+coverage/
+coverage-final.json
+*.pid
+*.seed
+*.tgz
+*.swp
+*.swo
+
+node_modules
