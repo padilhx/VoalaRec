@@ -1,0 +1,10 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+@font-face {
+  font-family: 'MinhaFonte';
+  src: url('/src/app/newFonts/heroFont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
