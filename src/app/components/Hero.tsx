@@ -75,7 +75,7 @@ export function Hero() {
             className="text-base sm:text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            Autenticidade, atitude e som de rua. <br />
+            Autenticidade, atitude e resistência. <br />
             Onde o rap encontra sua verdadeira voz.
           </motion.p>
 

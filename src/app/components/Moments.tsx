@@ -90,7 +90,7 @@ export function Moments() {
             className="text-6xl md:text-7xl font-black mb-4 text-white tracking-tight uppercase"
             style={{ fontFamily: 'Oswald, sans-serif' }}
           >
-            Na Rua
+            Na pista
           </h2>
           <div className="w-24 h-1 bg-white mx-auto mb-6"></div>
           <p

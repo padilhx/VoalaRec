@@ -51,17 +51,17 @@ export function History() {
                 arte.
               </p>
               <p className="text-lg leading-relaxed">
-                Nosso nome vem da gíria de rua "voar alto" - representando a
-                ascensão, a superação e o voo que cada artista dá ao transformar
-                sua realidade em arte. Somos mais que uma gravadora: somos um
+                Nosso nome vem da gíria "voar alto" - representando a ascensão,
+                a superação e o voo que cada artista dá ao transformar sua
+                realidade em arte. Somos mais que uma gravadora: somos um
                 movimento, uma família, um coletivo que acredita no poder
                 transformador da música.
               </p>
               <p className="text-lg leading-relaxed">
                 Do estúdio independente no coração da cidade às principais
                 plataformas de streaming, levamos a essência da rua para o
-                mundo. Cada beat, cada rima, cada mensagem carrega a verdade das
-                ruas e a força de quem vive a cultura.
+                mundo. Cada beat, cada rima, cada mensagem carrega a verdade e a
+                força de quem vive a cultura.
               </p>
               <p className="text-lg leading-relaxed font-semibold text-white">
                 Voala não é só música. É atitude, resistência e
