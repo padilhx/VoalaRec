@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { Play } from 'lucide-react';
 import { useInView } from './useInView';
@@ -6,37 +7,50 @@ import {
   proldaculturaImage,
   substitutoImage,
   vencedorImage,
-  vistaseImage,
+  momentosImage,
 } from './images/music';
 
-const releases = [
+type Release = {
+  id: number;
+  title: string;
+  artist: string;
+  cover: string;
+  type: 'EP' | 'Single';
+  url: string;
+};
+
+const releases: Release[] = [
   {
     id: 1,
+    title: 'Momentos',
+    artist: 'Emize',
+    cover: momentosImage,
+    type: 'EP',
+    url: 'https://open.spotify.com/intl-pt/album/4H8N8bKHx7LXoLeIcZMTn5?si=ZzWRtaPtSualY4fGyRL33w',
+  },
+  {
+    id: 2,
     title: 'Em prol da cultura',
     artist: 'Emize ft negozero',
     cover: proldaculturaImage,
     type: 'Single',
-  },
-  {
-    id: 2,
-    title: 'Substituto',
-    artist: 'Blo-p ft Emize',
-    cover: substitutoImage,
-    type: 'EP',
+    url: 'https://open.spotify.com/intl-pt/track/5AglDzkW8bfF5bU6PFB1AS?si=ebd776f1328f48e6',
   },
   {
     id: 3,
+    title: 'Substituto',
+    artist: 'Blo-p ft Emize',
+    cover: substitutoImage,
+    type: 'Single',
+    url: 'https://open.spotify.com/intl-pt/track/3imLj6VbLMtWwGuGMYmhFe?si=ff9449d1281b4514',
+  },
+  {
+    id: 4,
     title: 'Vencedor',
     artist: 'Brazin',
     cover: vencedorImage,
     type: 'Single',
-  },
-  {
-    id: 4,
-    title: 'Vista se de acordo com a ocasião',
-    artist: 'Blo-p',
-    cover: vistaseImage,
-    type: 'Álbum',
+    url: 'https://open.spotify.com/intl-pt/track/2KyoBVl2MrZN7gVvfbrQ3y?si=d157d807078b49b4',
   },
 ];
 
@@ -95,15 +109,20 @@ export function Releases() {
                   />
 
                   {/* Overlay on Hover */}
-                  <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <motion.button
+                  <a
+                    href={release.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                  >
+                    <motion.div
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       className="bg-white text-black rounded-full p-4 shadow-lg"
                     >
                       <Play size={28} fill="currentColor" />
-                    </motion.button>
-                  </div>
+                    </motion.div>
+                  </a>
 
                   {/* Type Badge */}
                   <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-black text-xs font-bold px-3 py-1 uppercase tracking-wider">
@@ -115,13 +134,13 @@ export function Releases() {
               {/* Release Info */}
               <div>
                 <h3
-                  className="text-xl font-bold text-white mb-1 uppercase"
+                  className="text-xl font-bold text-white mb-1 uppercase truncate"
                   style={{ fontFamily: 'Teko, sans-serif' }}
                 >
                   {release.title}
                 </h3>
                 <p
-                  className="text-gray-400 text-sm"
+                  className="text-gray-400 text-sm truncate"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 >
                   {release.artist}
@@ -129,14 +148,17 @@ export function Releases() {
               </div>
 
               {/* Listen Button */}
-              <motion.button
+              <motion.a
+                href={release.url}
+                target="_blank"
+                rel="noreferrer"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="mt-4 w-full py-3 bg-white text-black font-semibold hover:bg-gray-200 transition-all duration-300 shadow-lg shadow-white/10 uppercase tracking-wider"
+                className="mt-4 w-full inline-flex items-center justify-center py-3 bg-white text-black font-semibold hover:bg-gray-200 transition-all duration-300 shadow-lg shadow-white/10 uppercase tracking-wider"
                 style={{ fontFamily: 'Teko, sans-serif' }}
               >
                 Ouça Agora
-              </motion.button>
+              </motion.a>
             </motion.div>
           ))}
         </div>

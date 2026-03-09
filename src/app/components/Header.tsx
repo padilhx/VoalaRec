@@ -34,9 +34,10 @@ export function Header() {
 
   return (
     <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      initial={{ y: -80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
         isScrolled
           ? 'bg-black/95 backdrop-blur-md shadow-lg shadow-white/5'
           : 'bg-transparent'
@@ -91,6 +92,7 @@ export function Header() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
+          transition={{ duration: 0.35, ease: 'easeOut' }}
           className="md:hidden bg-black/98 backdrop-blur-lg border-t border-white/10"
         >
           <nav className="flex flex-col space-y-4 p-6">

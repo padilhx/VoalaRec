@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { useInView } from './useInView';
 import { useState } from 'react';
@@ -16,7 +17,7 @@ const moments = [
     image: rlxfest1,
 
     date: '09.04.2022',
-    event: 'Primeiro evento do coletivo',
+    event: 'RlxFest - Primeiro evento do coletivo',
     location: 'Inae, Curitiba/PR',
   },
   {

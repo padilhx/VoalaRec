@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { Instagram, Twitter, Youtube, Mail, MapPin, Phone } from 'lucide-react';
 import { useInView } from './useInView';
@@ -57,8 +58,8 @@ export function Contact() {
             className="text-gray-400 text-lg max-w-2xl mx-auto"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            Quer fazer parte da família Voala? Entre em contato e vamos voar
-            juntos.
+            Contrate shows de nossos MCs, produza conosco ou grave sua musica
+            aqui.
           </p>
         </motion.div>
 

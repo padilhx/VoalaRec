@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
 import videoIntro from './videos/videointro.mp4';

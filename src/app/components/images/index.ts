@@ -4,3 +4,4 @@ export { default as peroliImage } from './peroli.png';
 export { default as tianImage } from './tian.png';
 export { default as brazinImage } from './brazin.png';
 export { default as winduImage } from './windu.png';
+export { default as k1llua33Image } from './k1llua33.png';
