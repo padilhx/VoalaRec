@@ -95,22 +95,15 @@ export function Hero() {
           </motion.button>
         </motion.div>
 
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 1.2, repeat: Infinity, ease: 'easeInOut' }}
+        {/* Scroll Indicator (seta estática) */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+          <div
             className="text-white/50 cursor-pointer"
             onClick={scrollToArtists}
           >
             <ChevronDown size={40} />
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
 
       {/* Urban Shapes */}
