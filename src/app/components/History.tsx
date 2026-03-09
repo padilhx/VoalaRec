@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { useInView } from './useInView';
 import VoalaImg from './images/voalahistory.png';
@@ -44,10 +45,8 @@ export function History() {
                 O coletivo é a junção de vivências, sonhos, frustrações e
                 vitórias pelas ruas de Curitiba. Cada um tem sua história, todas
                 com sua importância pra construir o que hoje chamamos de{' '}
-                <span className="text-white font-semibold">
-                  Gravadora Voala
-                </span>
-                . Mantendo a lealdade entre os irmãos e irmãs, e a originalidade
+                <span className="text-white font-semibold">Voala Records</span>.
+                Mantendo a lealdade entre os irmãos e irmãs, e a originalidade
                 individual de cada um, nos expressamos através da música e da
                 arte.
               </p>
