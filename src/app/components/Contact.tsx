@@ -62,7 +62,7 @@ export function Contact() {
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
           className="text-center mb-16"
         >
           <h2
@@ -85,7 +85,7 @@ export function Contact() {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -168,7 +168,7 @@ export function Contact() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
             className="space-y-8"
           >
             {/* Contact Details */}

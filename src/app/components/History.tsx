@@ -23,7 +23,7 @@ export function History() {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
           >
             {/* Title */}
             <h2
@@ -74,7 +74,7 @@ export function History() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
             className="relative"
           >
             <div className="relative overflow-hidden shadow-2xl shadow-black/50">
@@ -97,7 +97,7 @@ export function History() {
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              transition={{ duration: 0.3, delay: 0.3 }}
               className="absolute -bottom-6 -left-6 bg-white text-black p-6 shadow-xl"
             >
               <p

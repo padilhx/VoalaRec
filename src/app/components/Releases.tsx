@@ -71,7 +71,7 @@ export function Releases() {
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
           className="text-center mb-16"
         >
           <h2
@@ -96,7 +96,7 @@ export function Releases() {
               key={release.id}
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.3, delay: index * 0.05 }}
               className="group relative"
             >
               {/* Cover Art */}

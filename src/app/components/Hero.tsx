@@ -42,13 +42,13 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
         >
           {/* Main Title */}
           <motion.h1
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
             className="text-8xl sm:text-9xl md:text-[12rem] font-black mb-6 tracking-wider"
             style={{ fontFamily: 'MinhaFonte' }}
           >
@@ -61,7 +61,7 @@ export function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
             className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-4 max-w-3xl mx-auto uppercase tracking-widest"
             style={{ fontFamily: 'Teko, sans-serif', fontWeight: 600 }}
           >
@@ -71,7 +71,7 @@ export function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
             className="text-base sm:text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
@@ -83,7 +83,7 @@ export function Hero() {
           <motion.button
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.4, delay: 0.4 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToArtists}
@@ -99,12 +99,12 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+            transition={{ duration: 1.2, repeat: Infinity, ease: 'easeInOut' }}
             className="text-white/50 cursor-pointer"
             onClick={scrollToArtists}
           >
