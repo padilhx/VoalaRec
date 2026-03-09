@@ -11,7 +11,6 @@ export function History() {
       id="historia"
       className="relative py-24 md:py-32 bg-black overflow-hidden"
     >
-      {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,13 +18,11 @@ export function History() {
           ref={ref}
           className="grid md:grid-cols-2 gap-12 md:gap-16 items-center"
         >
-          {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.4 }}
           >
-            {/* Title */}
             <h2
               className="text-6xl md:text-7xl font-black mb-6 text-white tracking-tight uppercase"
               style={{ fontFamily: 'Oswald, sans-serif' }}
@@ -33,10 +30,8 @@ export function History() {
               Nossa História
             </h2>
 
-            {/* Decorative Line */}
             <div className="w-24 h-1 bg-white mb-8"></div>
 
-            {/* Story Text */}
             <div
               className="space-y-6 text-gray-300"
               style={{ fontFamily: 'Inter, sans-serif' }}
@@ -70,7 +65,6 @@ export function History() {
             </div>
           </motion.div>
 
-          {/* Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -78,22 +72,18 @@ export function History() {
             className="relative"
           >
             <div className="relative overflow-hidden shadow-2xl shadow-black/50">
-              {/* Image */}
               <img
                 src={VoalaImg}
                 alt="Estúdio Voala"
                 className="w-full h-full object-cover"
               />
 
-              {/* Overlay Effect */}
               <div className="absolute inset-0 bg-black/40"></div>
 
-              {/* Corner Decoration */}
               <div className="absolute top-0 left-0 w-32 h-32 border-l-2 border-t-2 border-white"></div>
               <div className="absolute bottom-0 right-0 w-32 h-32 border-r-2 border-b-2 border-white"></div>
             </div>
 
-            {/* Floating Badge */}
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}

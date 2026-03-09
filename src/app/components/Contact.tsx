@@ -156,7 +156,7 @@ export function Contact() {
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 disabled={submitted}
-                className="w-full py-4 bg-white text-black font-bold hover:bg-gray-200 transition-all duration-300 shadow-lg shadow-white/20 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-wider"
+                className="w-full py-4 bg-white text-black font-bold hover:bg-gray-200 transition-all duration-300 shadow-lg shadow-white/20 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-wider cursor-pointer"
                 style={{ fontFamily: 'Teko, sans-serif' }}
               >
                 {submitted ? 'Mensagem Enviada! ✓' : 'Enviar Mensagem'}
@@ -171,7 +171,6 @@ export function Contact() {
             transition={{ duration: 0.4, delay: 0.1 }}
             className="space-y-8"
           >
-            {/* Contact Details */}
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="bg-white p-3">
@@ -244,7 +243,6 @@ export function Contact() {
               </div>
             </div>
 
-            {/* Social Media */}
             <div className="pt-8 border-t border-white/20">
               <h3
                 className="text-white font-bold mb-6 uppercase"
@@ -259,7 +257,7 @@ export function Contact() {
                   href={SOCIAL_LINKS.instagram}
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-white p-4 text-black hover:bg-gray-200 transition-all shadow-lg"
+                  className="bg-white p-4 text-black hover:bg-gray-200 transition-all shadow-lg cursor-pointer"
                 >
                   <Instagram size={28} />
                 </motion.a>
@@ -269,7 +267,7 @@ export function Contact() {
                   href={SOCIAL_LINKS.spotify}
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-white p-4 text-black hover:bg-gray-200 transition-all shadow-lg"
+                  className="bg-white p-4 text-black hover:bg-gray-200 transition-all shadow-lg cursor-pointer"
                 >
                   <Music2 size={28} />
                 </motion.a>
@@ -279,14 +277,13 @@ export function Contact() {
                   href={SOCIAL_LINKS.youtube}
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-white p-4 text-black hover:bg-gray-200 transition-all shadow-lg"
+                  className="bg-white p-4 text-black hover:bg-gray-200 transition-all shadow-lg cursor-pointer"
                 >
                   <Youtube size={28} />
                 </motion.a>
               </div>
             </div>
 
-            {/* CTA Box */}
             <div className="bg-zinc-950 border border-white/20 p-6 backdrop-blur-sm">
               <h3
                 className="text-white font-bold mb-3 uppercase"

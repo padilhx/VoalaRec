@@ -18,7 +18,6 @@ import {
   CarouselPrevious,
 } from './ui/carousel';
 const teamMembers = [
-  // MCs
   {
     id: 1,
     name: 'Blo-P',
@@ -59,7 +58,6 @@ const teamMembers = [
     image: peroliImage,
     type: 'mc',
   },
-  // Designer
   {
     id: 5,
     name: 'k1llua33',
@@ -70,7 +68,6 @@ const teamMembers = [
     image: k1llua33Image,
     type: 'designer',
   },
-  // Produtor
   {
     id: 6,
     name: 'Windu',
@@ -81,7 +78,6 @@ const teamMembers = [
     image: winduImage,
     type: 'producer',
   },
-  // DJ
   {
     id: 7,
     name: 'TiianBeats',
@@ -106,7 +102,6 @@ export function Artists() {
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -130,7 +125,6 @@ export function Artists() {
           </p>
         </motion.div>
 
-        {/* Carrossel de artistas */}
         <Carousel
           className="relative"
           opts={{
@@ -150,7 +144,6 @@ export function Artists() {
                   transition={{ duration: 0.3, delay: index * 0.05 }}
                   className="group relative overflow-hidden aspect-square cursor-pointer bg-black"
                 >
-                  {/* Imagem do artista */}
                   <div className="relative w-full h-full">
                     <img
                       src={member.image}
@@ -158,13 +151,10 @@ export function Artists() {
                       className="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-110"
                     />
 
-                    {/* Overlay da imagem */}
                     <div className="absolute inset-0 bg-black/20"></div>
                   </div>
 
-                  {/* Overlay com informações no hover */}
                   <div className="absolute inset-0 bg-black/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center p-6 text-center">
-                    {/* Nome */}
                     <h3
                       className="text-3xl md:text-4xl font-black text-white mb-2 uppercase tracking-wide"
                       style={{ fontFamily: 'Permanent Marker, cursive' }}
@@ -172,7 +162,6 @@ export function Artists() {
                       {member.name}
                     </h3>
 
-                    {/* Função */}
                     <p
                       className="text-base md:text-lg text-gray-300 font-bold mb-3 uppercase tracking-widest"
                       style={{ fontFamily: 'Teko, sans-serif' }}
@@ -180,7 +169,6 @@ export function Artists() {
                       {member.role}
                     </p>
 
-                    {/* Estilo (apenas MCs) */}
                     {member.style && (
                       <p
                         className="text-sm text-gray-400 mb-4 font-semibold"
@@ -190,10 +178,8 @@ export function Artists() {
                       </p>
                     )}
 
-                    {/* Divisor */}
                     <div className="w-16 h-px bg-white/40 mb-4"></div>
 
-                    {/* Descrição */}
                     <p
                       className="text-sm text-gray-300 leading-relaxed max-w-xs"
                       style={{ fontFamily: 'Inter, sans-serif' }}
@@ -202,7 +188,6 @@ export function Artists() {
                     </p>
                   </div>
 
-                  {/* Indicador de tipo */}
                   <div className="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <div className="w-2 h-2 bg-white"></div>
                   </div>

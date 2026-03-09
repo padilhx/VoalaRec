@@ -66,10 +66,8 @@ export function Moments() {
       id="momentos"
       className="relative py-24 md:py-32 bg-zinc-950 overflow-hidden"
     >
-      {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
 
-      {/* Concrete Texture Overlay */}
       <div
         className="absolute inset-0 opacity-5"
         style={{
@@ -78,7 +76,6 @@ export function Moments() {
       ></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -101,7 +98,6 @@ export function Moments() {
           </p>
         </motion.div>
 
-        {/* Moments Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {moments.map((moment, index) => (
             <motion.div
@@ -113,14 +109,12 @@ export function Moments() {
               onMouseEnter={() => setHoveredId(moment.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
-              {/* Image */}
               <img
                 src={moment.image}
                 alt={moment.event}
                 className="w-full h-full object-cover grayscale group-hover:scale-110 transition-transform duration-500"
               />
 
-              {/* Overlay */}
               <div
                 className={`absolute inset-0 bg-black/80 backdrop-blur-sm flex flex-col items-center justify-center p-6 transition-opacity duration-300 ${
                   hoveredId === moment.id ? 'opacity-100' : 'opacity-0'
@@ -145,11 +139,9 @@ export function Moments() {
                   {moment.location}
                 </p>
 
-                {/* Decorative element */}
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-16 h-px bg-white"></div>
               </div>
 
-              {/* Corner Border */}
               <div
                 className={`absolute top-0 right-0 w-16 h-16 border-r-2 border-t-2 border-white transition-opacity duration-300 ${
                   hoveredId === moment.id ? 'opacity-100' : 'opacity-0'

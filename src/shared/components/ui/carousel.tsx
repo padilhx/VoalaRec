@@ -178,7 +178,7 @@ type CarouselButtonProps = React.ComponentProps<typeof Button>;
 
 function CarouselPrevious({
   className,
-  variant = 'outline',
+  variant = 'default',
   size = 'icon',
   ...props
 }: CarouselButtonProps) {
@@ -190,7 +190,7 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn(
-        'absolute size-8 rounded-full',
+        'absolute size-10 rounded-full bg-white text-black shadow-lg hover:bg-gray-200 transition-all duration-300 cursor-pointer',
         orientation === 'horizontal'
           ? 'top-1/2 -left-12 -translate-y-1/2'
           : '-top-12 left-1/2 -translate-x-1/2 rotate-90',
@@ -208,7 +208,7 @@ function CarouselPrevious({
 
 function CarouselNext({
   className,
-  variant = 'outline',
+  variant = 'default',
   size = 'icon',
   ...props
 }: CarouselButtonProps) {
@@ -220,7 +220,7 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn(
-        'absolute size-8 rounded-full',
+        'absolute size-10 rounded-full bg-white text-black shadow-lg hover:bg-gray-200 transition-all duration-300 cursor-pointer',
         orientation === 'horizontal'
           ? 'top-1/2 -right-12 -translate-y-1/2'
           : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',

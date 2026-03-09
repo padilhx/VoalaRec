@@ -66,7 +66,6 @@ export function Releases() {
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -89,7 +88,6 @@ export function Releases() {
           </p>
         </motion.div>
 
-        {/* Releases Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {releases.map((release, index) => (
             <motion.div
@@ -99,7 +97,6 @@ export function Releases() {
               transition={{ duration: 0.3, delay: index * 0.05 }}
               className="group relative"
             >
-              {/* Cover Art */}
               <div className="relative overflow-hidden mb-4 shadow-xl hover:shadow-2xl hover:shadow-white/10 transition-all duration-300">
                 <div className="aspect-square relative">
                   <img
@@ -108,7 +105,6 @@ export function Releases() {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
 
-                  {/* Overlay on Hover */}
                   <a
                     href={release.url}
                     target="_blank"
@@ -124,14 +120,12 @@ export function Releases() {
                     </motion.div>
                   </a>
 
-                  {/* Type Badge */}
                   <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-black text-xs font-bold px-3 py-1 uppercase tracking-wider">
                     {release.type}
                   </div>
                 </div>
               </div>
 
-              {/* Release Info */}
               <div>
                 <h3
                   className="text-xl font-bold text-white mb-1 uppercase truncate"
@@ -147,14 +141,13 @@ export function Releases() {
                 </p>
               </div>
 
-              {/* Listen Button */}
               <motion.a
                 href={release.url}
                 target="_blank"
                 rel="noreferrer"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="mt-4 w-full inline-flex items-center justify-center py-3 bg-white text-black font-semibold hover:bg-gray-200 transition-all duration-300 shadow-lg shadow-white/10 uppercase tracking-wider"
+                className="mt-4 w-full inline-flex items-center justify-center py-3 bg-white text-black font-semibold hover:bg-gray-200 transition-all duration-300 shadow-lg shadow-white/10 uppercase tracking-wider cursor-pointer"
                 style={{ fontFamily: 'Teko, sans-serif' }}
               >
                 Ouça Agora

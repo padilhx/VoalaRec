@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ChevronDown } from 'lucide-react';
 import videoIntro from './videos/videointro.mp4';
 
 export function Hero() {
@@ -26,10 +25,8 @@ export function Hero() {
         <source src={videoIntro} type="video/mp4" />
       </video>
 
-      {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/85"></div>
 
-      {/* Noise Texture Overlay */}
       <div
         className="absolute inset-0 opacity-10"
         style={{
@@ -37,14 +34,12 @@ export function Hero() {
         }}
       ></div>
 
-      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          {/* Main Title */}
           <motion.h1
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -57,7 +52,6 @@ export function Hero() {
             </span>
           </motion.h1>
 
-          {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -79,7 +73,6 @@ export function Hero() {
             Onde o rap encontra sua verdadeira voz.
           </motion.p>
 
-          {/* CTA Button */}
           <motion.button
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -87,7 +80,7 @@ export function Hero() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToArtists}
-            className="group relative px-8 py-4 bg-white text-black text-lg font-bold rounded-none overflow-hidden shadow-lg shadow-white/20 hover:shadow-white/30 transition-all duration-300 uppercase tracking-wider"
+            className="group relative px-8 py-4 bg-white text-black text-lg font-bold rounded-none overflow-hidden shadow-lg shadow-white/20 hover:shadow-white/30 transition-all duration-300 uppercase tracking-wider cursor-pointer"
             style={{ fontFamily: 'Teko, sans-serif' }}
           >
             <span className="relative z-10">Conheça os Artistas</span>
@@ -95,18 +88,15 @@ export function Hero() {
           </motion.button>
         </motion.div>
 
-        {/* Scroll Indicator (seta estática) */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
-          <div
-            className="text-white/50 cursor-pointer"
+          <button
+            type="button"
+            className="text-white/50 cursor-pointer text-sm tracking-widest uppercase"
             onClick={scrollToArtists}
-          >
-            <ChevronDown size={40} />
-          </div>
+          ></button>
         </div>
       </div>
 
-      {/* Urban Shapes */}
       <div className="absolute top-1/4 left-0 w-64 h-64 border border-white/10 rotate-45 -translate-x-32"></div>
       <div className="absolute bottom-1/4 right-0 w-80 h-80 border border-white/10 rotate-12 translate-x-40"></div>
     </section>
