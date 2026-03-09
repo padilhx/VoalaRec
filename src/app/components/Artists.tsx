@@ -25,7 +25,7 @@ const teamMembers = [
     role: 'MC',
     style: 'BoomBap / Trap / Old School',
     description:
-      'BLO-P é rapper, cantor, compositor e produtor musical de Curitiba e cofundador da Voala Records. Na cena local, lançou os singles “Vista-se de Acordo à Ocasião”, “Substituto” e “Bolacha”, além do EP “Velhos Problemas, Novos Amigos”, e já se apresentou em casas como Tangie Underclub, Stand By Music e Camaleão Cultural.',
+      'BLO-P é rapper, cantor, compositor e produtor musical de Curitiba e cofundador da Voala Records. Na cena local, lançou os singles “Vista-se de Acordo à Ocasião”, “Substituto” e “Bolacha”, e já se apresentou em casas como Tangie Underclub, Stand By Music e Camaleão Cultural.',
     image: blopImage,
     type: 'mc',
   },
@@ -55,7 +55,7 @@ const teamMembers = [
     role: 'MC',
     style: 'Boom Bap / Old School',
     description:
-      'Per0li é uma MC de rap de Curitiba que iniciou sua trajetória em 2025. Com presença em batalhas de rima e shows da cena underground, lançou os singles “Abandono” e “Suposição Onírica”, marcando sua identidade na nova geração do rap curitibano.',
+      'Per0li é uma MC de rap de Curitiba que iniciou sua trajetória em 2025. Com presença em batalhas de rima e shows da cena underground, marcando sua identidade na nova geração do rap curitibano.',
     image: peroliImage,
     type: 'mc',
   },

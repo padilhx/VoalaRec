@@ -83,7 +83,7 @@ export function History() {
               <img
                 src={VoalaImg}
                 alt="Estúdio Voala"
-                className="w-full h-full object-cover grayscale"
+                className="w-full h-full object-cover"
               />
 
               {/* Overlay Effect */}

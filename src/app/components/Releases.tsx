@@ -105,7 +105,7 @@ export function Releases() {
                   <img
                     src={release.cover}
                     alt={release.title}
-                    className="w-full h-full object-cover grayscale transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
 
                   {/* Overlay on Hover */}
