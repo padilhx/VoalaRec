@@ -1,8 +1,17 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Instagram, Twitter, Youtube, Mail, MapPin, Phone } from 'lucide-react';
+import { Instagram, Music2, Youtube, Mail, MapPin, Phone } from 'lucide-react';
 import { useInView } from './useInView';
 import { useState } from 'react';
+
+const CONTACT_EMAIL = 'tiianbeats@gmail.com';
+
+const SOCIAL_LINKS = {
+  instagram: 'https://www.instagram.com/voala.records/',
+  spotify: 'https://hyperfollow.com/voala',
+  youtube:
+    'https://www.youtube.com/watch?v=zAQG8GkhSG8&list=PLrE48ITP2OgjK6LfJy-NKwxGXnz42LqeN',
+} as const;
 
 export function Contact() {
   const { ref, inView } = useInView();
@@ -15,7 +24,16 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Mock submission
+
+    const subject = encodeURIComponent('Contato via site Voala Records');
+    const body = encodeURIComponent(
+      `Nome: ${formData.name}\nE-mail: ${formData.email}\n\nMensagem:\n${formData.message}`
+    );
+
+    if (typeof window !== 'undefined') {
+      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    }
+
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -169,12 +187,13 @@ export function Contact() {
                   >
                     Email
                   </h3>
-                  <p
-                    className="text-gray-400"
+                  <a
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    className="text-gray-400 hover:text-white transition-colors"
                     style={{ fontFamily: 'Inter, sans-serif' }}
                   >
-                    tiianbeats@gmail.com
-                  </p>
+                    {CONTACT_EMAIL}
+                  </a>
                 </div>
               </div>
 
@@ -237,7 +256,9 @@ export function Contact() {
                 <motion.a
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
-                  href="#"
+                  href={SOCIAL_LINKS.instagram}
+                  target="_blank"
+                  rel="noreferrer"
                   className="bg-white p-4 text-black hover:bg-gray-200 transition-all shadow-lg"
                 >
                   <Instagram size={28} />
@@ -245,15 +266,19 @@ export function Contact() {
                 <motion.a
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
-                  href="#"
+                  href={SOCIAL_LINKS.spotify}
+                  target="_blank"
+                  rel="noreferrer"
                   className="bg-white p-4 text-black hover:bg-gray-200 transition-all shadow-lg"
                 >
-                  <Twitter size={28} />
+                  <Music2 size={28} />
                 </motion.a>
                 <motion.a
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
-                  href="#"
+                  href={SOCIAL_LINKS.youtube}
+                  target="_blank"
+                  rel="noreferrer"
                   className="bg-white p-4 text-black hover:bg-gray-200 transition-all shadow-lg"
                 >
                   <Youtube size={28} />
